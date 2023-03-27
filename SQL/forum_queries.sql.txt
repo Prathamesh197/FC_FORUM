@@ -1,0 +1,134 @@
+-- Table: public.courses
+
+-- DROP TABLE IF EXISTS public.courses;
+
+CREATE TABLE IF NOT EXISTS public.courses
+(
+    course_id integer NOT NULL DEFAULT nextval('courses_course_id_seq'::regclass),
+    course_offered_by character varying COLLATE pg_catalog."default",
+    course_name character varying COLLATE pg_catalog."default",
+    course_platform character varying COLLATE pg_catalog."default",
+    course_duration character varying COLLATE pg_catalog."default",
+    course_fees integer,
+    CONSTRAINT courses_pkey PRIMARY KEY (course_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.courses
+    OWNER to postgres;
+
+/*******************************************************2*******************************************************/
+-- Table: public.placements
+
+-- DROP TABLE IF EXISTS public.placements;
+
+CREATE TABLE IF NOT EXISTS public.placements
+(
+    company_id integer NOT NULL DEFAULT nextval('placements_company_id_seq'::regclass),
+    job_role character varying COLLATE pg_catalog."default",
+    job_intake integer,
+    attachments character varying COLLATE pg_catalog."default",
+    "package" integer,
+    company_name character varying COLLATE pg_catalog."default",
+    CONSTRAINT placements_pkey PRIMARY KEY (company_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.placements
+    OWNER to postgres;
+
+-- Table: public.placements
+
+/*******************************************************3*******************************************************/
+
+-- Table: public.replies
+
+-- DROP TABLE IF EXISTS public.replies;
+
+CREATE TABLE IF NOT EXISTS public.replies
+(
+    reply_id integer NOT NULL DEFAULT nextval('replies_reply_id_seq'::regclass),
+    reply_desc character varying COLLATE pg_catalog."default",
+    replied_by character varying COLLATE pg_catalog."default",
+    reply_time character varying COLLATE pg_catalog."default",
+    reply_likes integer,
+    reply_views integer,
+    thread_reply_id integer,
+    CONSTRAINT replies_pkey PRIMARY KEY (reply_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.replies
+    OWNER to postgres;
+
+/*******************************************************4*******************************************************/
+
+-- Table: public.threads
+
+-- DROP TABLE IF EXISTS public.threads;
+
+CREATE TABLE IF NOT EXISTS public.threads
+(
+    thread_id integer NOT NULL DEFAULT nextval('threads_thread_id_seq'::regclass),
+    thread_name character varying COLLATE pg_catalog."default",
+    thread_desc character varying COLLATE pg_catalog."default",
+    thread_created_by character varying COLLATE pg_catalog."default",
+    thread_time character varying COLLATE pg_catalog."default",
+    thread_topic character varying COLLATE pg_catalog."default",
+    thread_replies bigint,
+    thread_views bigint,
+    CONSTRAINT threads_pkey PRIMARY KEY (thread_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.threads
+    OWNER to postgres;
+
+/*******************************************************5*******************************************************/
+
+-- Table: public.user_credentials
+
+-- DROP TABLE IF EXISTS public.user_credentials;
+
+CREATE TABLE IF NOT EXISTS public.user_credentials
+(
+    username character varying COLLATE pg_catalog."default" NOT NULL,
+    password character varying COLLATE pg_catalog."default",
+    name character varying COLLATE pg_catalog."default",
+    email_id character varying COLLATE pg_catalog."default",
+    mobile_number bigint,
+    batch bigint,
+    CONSTRAINT user_credentials_pkey PRIMARY KEY (username)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.user_credentials
+    OWNER to postgres;
+
+/*******************************************************6*******************************************************/
+
+-- Table: public.user_profile_image
+
+-- DROP TABLE IF EXISTS public.user_profile_image;
+
+CREATE TABLE IF NOT EXISTS public.user_profile_image
+(
+    username character varying COLLATE pg_catalog."default" NOT NULL,
+    image character varying COLLATE pg_catalog."default",
+    CONSTRAINT user_profile_image_pkey PRIMARY KEY (username)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.user_profile_image
+    OWNER to postgres;
+
+
+
+
+

@@ -1,0 +1,314 @@
+@font-face{
+  font-family:Poppins;
+  src:url(Poppins-Regular.ttf);
+}
+
+body{
+  background-color:#1b203d;
+}
+main{
+  display: grid;
+  grid-template-columns: 17vw 60vw 17vw;
+  grid-template-rows: 10vh 90vh;
+  row-gap: 3vh;
+  column-gap: 3vh;
+ }
+/*********************Nav Bar CSS *******************/
+nav{
+  grid-row:1/2 ;
+  grid-column:1/-1 ;
+  /* background-color:linear-gradient(120deg,#2980b9,#8e44ad); */
+  border-radius: 1vw;
+  color: white;
+}
+ul{
+  display:grid;
+  grid-template-columns: 20vw 8vw 8vw 12vw 12vw 20vw 8vw;
+ grid-template-rows:7vh ;
+ column-gap: 1vw;
+}
+.logo{
+  grid-row:1/-1 ;
+  grid-column:1/2 ;
+  /* text-align: center; */
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.9vw;
+  font-weight: 600;
+   font-family: 'Poppins', sans-serif;
+letter-spacing: 0.08vw;
+ color:yellow;
+ /*filter:drop-shadow(3px -5px 0px #000000);*/  
+}
+.logo a{
+  padding-bottom: 0.7vh;
+  color:#ffffff;
+  font-weight:bold;
+}
+.forum{
+  grid-row:1/-1 ;
+  grid-column:2/3 ;
+  list-style: none;
+  text-align: center;
+  font-size: 1.4vw;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+.forum a{
+  color:#bcb0b0;
+}
+.notes{
+  grid-row:1/-1 ;
+  grid-column:3/4 ;
+  list-style: none;
+  text-align: center; 
+  font-size: 1.3vw;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+.notes a{
+  color:#bcb0b0;
+}
+.ex_courses{
+  grid-row:1/-1 ;
+  grid-column:4/5 ;
+  list-style: none;
+  text-align: center; 
+  font-size: 1.3vw;
+  font-family: 'Poppins', sans-serif;
+}
+.ex_courses a{
+  color:#bcb0b0;
+}
+.placements{
+  grid-row:1/-1 ;
+  grid-column:5/6 ;
+  list-style: none;
+  text-align: center; 
+  font-size: 1.3vw;
+  font-family: 'Poppins', sans-serif;
+}
+.placements a{
+  color:#bcb0b0;
+}
+.social_work{
+  grid-row:1/-1 ;
+  grid-column:6/7 ;
+  list-style: none;
+  text-align: center; 
+  font-size: 1.3vw;
+  font-family: 'Poppins', sans-serif;
+}
+.social_work a{
+  color: black;
+}
+.profile_img{
+  grid-row:1/-1 ;
+  grid-column:7/8 ;
+  list-style: none;
+  text-align: center; 
+  font-size: 1.3vw;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.profile_img img{
+  width: 2.5vw;
+  height: 5vh;
+  border-radius: 50%;
+ 
+}
+#hover{
+  border-bottom:0.5vh solid #CAFAFE;
+  color: white;
+}
+/****************Main Content CSS*********************/
+.main_content{
+  grid-row:2/-1 ;
+  grid-column:1/-1 ;
+ 
+  border-radius: 1vw;
+  display: grid;
+  grid-template-columns: 15vw 22vw 22vw 22vw 15vw;
+  grid-template-rows:15vh 35vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #272c4a;
+  background-image: linear-gradient(30deg,transparent 60%, rgba(69,170,242,0.2));
+  border: 1px solid#A3CEEC;
+ 
+}
+.main_head{
+  /* text-align: center; */
+  grid-row:1/2 ;
+  grid-column:3/4 ;
+  font-size: 2vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: bold;
+  padding-left: 5vw;
+  padding-top: 4vh;
+  height: 5vh;
+  color: #adefd1ff;
+ 
+}
+.left_blank{
+    grid-row:2/3 ;
+    grid-column:1/2 ;  
+}
+.right_blank{
+    grid-row:2/3 ;
+    grid-column:5/6 ;  
+}
+.fy{
+    grid-row:2/3 ;
+    grid-column:2/3 ;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: bold; 
+    /* background-color: blue;  */
+    text-align: center;
+    display: grid;
+    grid-template-columns: 22vw;
+    grid-template-rows: 10vh 10vh 10vh;
+    border-left: 2px solid #adefd1ff;
+}
+.first_year_head{
+    grid-row:1/2 ;
+    grid-column:1/-1 ;
+    color: white;
+}
+.sem1{
+    grid-row:2/3 ;
+    grid-column:1/-1 ;
+   
+}
+.sem1 button{
+    width: 10vw;
+    height: 6vh;
+   padding: 0.5vh 1vw;
+    border-color:black;
+   border-radius: 0.5vw;
+   font-weight: 500;
+   font-size: 1.2vw;
+   background: #1E90FF;
+}
+button a{
+    text-decoration: none;
+    color: white;
+   
+   font-size: 1.2vw;
+   font-family: 'Poppins';
+}
+.sem2{
+    grid-row:3/4 ;
+    grid-column:1/-1 ;
+    
+}
+.sem2 button{
+    width: 10vw;
+    height: 6vh;
+   
+   padding: 0.5vh 1vw;
+    border-color:black;
+   border-radius: 0.5vw;
+   font-weight: 500;
+   font-size: 1.2vw;
+   background: #1E90FF;
+}
+.sy{
+   grid-row:2/3 ;
+    grid-column:3/4 ;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: bold; 
+    /* background-color: blue;  */
+    text-align: center;
+    display: grid;
+    grid-template-columns: 22vw;
+    grid-template-rows: 10vh 10vh 10vh;
+    border-left: 2px solid #adefd1ff;
+}
+.second_year_head{
+    grid-row:1/2 ;
+    grid-column:1/-1 ;
+    color: white;
+}
+.sem3{
+    grid-row:2/3 ;
+    grid-column:1/-1 ;
+   
+}
+.sem3 button{
+    width: 10vw;
+    height: 6vh;
+   padding: 0.5vh 1vw;
+    border-color:black;
+   border-radius: 0.5vw;
+   font-weight: 500;
+   font-size: 1.2vw;
+   background: #1E90FF;
+}
+.sem4{
+    grid-row:3/4 ;
+    grid-column:1/-1 ;
+   
+}
+.sem4 button{
+    width: 10vw;
+    height: 6vh;
+   padding: 0.5vh 1vw;
+    border-color:black;
+   border-radius: 0.5vw;
+   font-weight: 500;
+   font-size: 1.2vw;
+   background: #1E90FF;
+}
+.ty{
+    grid-row:2/3 ;
+    grid-column:4/5 ;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: bold; 
+    /* background-color: blue;  */
+    text-align: center;
+    display: grid;
+    grid-template-columns: 22vw;
+    grid-template-rows: 10vh 10vh 10vh;
+    border-left: 2px solid #adefd1ff;
+    border-right: 2px solid #adefd1ff;
+}
+.third_year_head{
+    grid-row:1/2 ;
+    grid-column:1/-1 ;
+    color: white;
+}
+.sem5{
+    grid-row:2/3 ;
+    grid-column:1/-1 ;
+   
+}
+.sem5 button{
+    width: 10vw;
+    height: 6vh;
+    font-weight: 500;
+    font-size: 1.2vw;
+    background: #1E90FF;
+    padding: 0.5vh 1vw;
+    border-color:black;
+   border-radius: 0.5vw;
+}
+.sem6{
+    grid-row:3/4 ;
+    grid-column:1/-1 ;
+   
+}
+.sem6 button{
+    width: 10vw;
+    height: 6vh;
+   
+   padding: 0.5vh 1vw;
+    border-color:black;
+   border-radius: 0.5vw;
+   font-weight: 500;
+   font-size: 1.2vw;
+   background: #1E90FF;
+}
+
